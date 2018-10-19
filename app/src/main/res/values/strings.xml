@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidInjectorSample</string>
+    <string name="go_second_activity">Go Second Activity</string>
+    <string name="go_third_activity">Go Third Activity</string>
+</resources>
