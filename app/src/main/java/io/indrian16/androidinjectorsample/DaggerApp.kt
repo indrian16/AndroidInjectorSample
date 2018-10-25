@@ -11,12 +11,13 @@ import javax.inject.Inject
 
 class DaggerApp : Application(), HasActivityInjector {
 
-    @Inject lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
+    @Inject internal lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
 
     override fun onCreate() {
         super.onCreate()
 
         DaggerAppComponent.builder()
+                .application(this)
                 .appModule(AppModule())
                 .build()
                 .inject(this)

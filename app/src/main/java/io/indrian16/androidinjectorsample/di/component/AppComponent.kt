@@ -1,5 +1,7 @@
 package io.indrian16.androidinjectorsample.di.component
 
+import android.app.Application
+import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 import io.indrian16.androidinjectorsample.DaggerApp
@@ -13,6 +15,9 @@ interface AppComponent {
 
     @Component.Builder
     interface Builder {
+
+        @BindsInstance
+        fun application(application: Application): Builder
 
         fun appModule(appModule: AppModule): Builder
 

@@ -8,8 +8,8 @@ import io.indrian16.androidinjectorsample.model.Hello
 class BaseActivityModule {
 
     @Provides
-    fun provideBaseView(baseActivity: BaseActivity): BaseView = baseActivity
+    internal fun provideBaseView(baseActivity: BaseActivity): BaseView = baseActivity
 
     @Provides
-    fun provideBasePresenter(baseView: BaseView, hello: Hello): BasePresenter = BasePresenterImpl(baseView, hello)
+    internal fun provideBasePresenter(baseView: BaseView, hello: Hello): BasePresenter = BasePresenterImpl(baseView, hello)
 }
